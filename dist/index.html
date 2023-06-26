@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goldberg Webudvikling</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" href="../src/images/cropped-jglogo.png" type="image/svg+xml">
+
+</head>
+<body>
+
+
+    
+    
+    <!-- START OF HERO -->
+    
+    <div class="bg-white">
+        <header class="absolute inset-x-0 top-0 z-50 ">
+          <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img class="h-10 w-auto" src="../src/images/cropped-jglogo.png" alt="j.goldberg logo">
+              </a>
+            </div>
+            <div class="flex lg:hidden">
+              <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12">
+              <a href="#services" class="text-sm font-semibold leading-6 text-gray-900">Services</a>
+              <a href="#about" class="text-sm font-semibold leading-6 text-gray-900">Om mig</a>
+              <a href="#testimonials" class="text-sm font-semibold leading-6 text-gray-900">Udtalelser</a>
+              <a href="#contact" class="text-sm font-semibold leading-6 text-gray-900">Kontakt</a>
+            </div>
+            
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+              <a href="mailto:hello@jonasgoldberg.dk" class="text-sm font-semibold leading-6 text-gray-900 pr-2 hover:scale-110 transition-transform duration-300">Skriv til mig</a>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              
+              
+            </div>
+          </nav>
+          <!-- Mobile menu, show/hide based on menu open state. -->
+          <div class="lg:hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-50"></div>
+            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+              <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Your Company</span>
+                  <img class="h-8 w-auto" src="../src/images/cropped-jglogo.png" alt="">
+                </a>
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                  <span class="sr-only">Close menu</span>
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                  <div class="space-y-2 py-6">
+                    <a href="#services" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Services</a>
+                    <a href="#about" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Om mig</a>
+                    <a href="#testimonials" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Udtalelser</a>
+                  </div>
+                  <div class="py-6">
+                    <a href="mailto:hello@jonasgoldberg.dk" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Skriv til mig</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      
+    
+
+          <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+            
+
+            <div class="text-center mt-4">
+              <h1 class="text-4xl font-light tracking-tight text-gray-900 sm:text-6xl">Webudvikler</h1>
+              <h1 class="text-4xl font-bolder tracking-tight text-blue-900 sm:text-6xl">Jonas Goldberg</h1>
+              <p class="mt-6 text-lg leading-8 text-gray-600">Professionel hjælp & sparring til at vækste din forretning online</p>
+              <div class="mt-10 flex items-center justify-center gap-x-6">
+                <style>
+                    html {
+                      scroll-behavior: smooth;
+                    }
+                  </style>
+                  
+                  <a href="#services">
+                    <div class="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                      <span class="text-white text-2xl ">▼</span>
+                    </div>
+                  </a>
+                  
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+          </div>
+        </div>
+      </div>
+      
+    <!-- END OF HERO-->
+   
+      
+
+      
+      
+      
+    <!-- START OF SERVICES-->
+    <section id="services">
+    <div class="bg-indigo-50 py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl lg:text-center">
+            <h2 class="text-base font-semibold leading-7 text-indigo-600">Services</h2>
+            <p class="mt-2 text-3xl font-lighter tracking-tight text-gray-900 sm:text-4xl">Lidt om hvad jeg tilbyder</p>
+            <p class="mt-6 text-lg leading-8 text-gray-600">Webudvikling omfatter en bred vifte af områder, men de har alle det fælles mål at fremme online vækst.</p>
+          </div>
+          <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                    </svg>
+                  </div>
+                  Webudvikling
+                </dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">Komplette hjemmesider eller optimering af eksisterende. Altid med fokus på responsivitet, hastighed, brugervenlighed og funktionalitet.</dd>
+              </div>
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>
+                  </div>
+                  Marketing
+                </dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">Opsætning og/eller optimgering af marketing strategier, kampagner mm. Google & SoMe samt andre relevante platforme.</dd>
+              </div>
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                    </svg>
+                  </div>
+                  SEO
+                </dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">SEO bliver ofte overset, men det kan være en af de bedste langsigtede investeringer. Jeg kan implementere langsigtede løsninger for SEO.</dd>
+              </div>
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                    </svg>
+                  </div>
+                 Branding
+                </dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">Skab og oprethold opmærksomhed omkring dit produkt eller virksomhed online. Branding er vigtigt for, at dine potentielle kunder kender dig.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+
+    <!-- END OF SERVICES-->
+
+
+
+    <!-- START OF ABOUT-->
+<!-- component -->
+<section id="about">
+<div class="py-16 bg-white">  
+    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+        <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+          <div class="md:5/12 lg:w-5/12 flex flex-col justify-center items-center">
+            <img src="../src/images/1.jpeg" class="rounded-lg shadow-xl" alt="image" loading="lazy" width="" height="">
+          </div>
+          <div class="md:7/12 lg:w-6/12">
+            <h2 class="text-2xl text-blue-900 font-lighter md:text-4xl">JONAS GOLDBERG
+            </h2>
+            <p class="mt-6 text-gray-600">Som en freelance-udvikler med ekspertise inden for B2B og B2C detailsalg, besidder jeg en bred vifte af færdigheder, der giver mig mulighed for at levere skræddersyede og teknisk komplekse projekter.</p>
+            <p class="mt-4 text-gray-600"> Min viden og erfaring inden for disse sektorer gør det muligt for mig at levere løsninger, der er skræddersyet til mine kunders specifikke behov og samtidig optimeret til at drive vækst.</p>
+            <p class="mt-4 text-gray-600"> Uanset om det indebærer design og udvikling af skræddersyede websites, integration af avanceret funktionalitet eller automatisering af arbejdsprocesser, har jeg evnen til at levere resultater af høj kvalitet, der skaber reel virksomhedsvækst og succes.</p>
+            <p class="mt-4 text-gray-600"> Jeg brænder for mit arbejde og er stolt af at kunne levere førsteklasses service og support til mine kunder. Det er min passion at sikre deres tilfredshed og bidrage til deres succes.</p>
+            <a href="mailto:hello@jonasgoldberg.dk">
+                <div class="hidden lg:flex lg:flex-1 lg:justify-start pt-8 ">
+                    <a href="mailto:hello@jonasgoldberg.dk" class="font-semibold leading-6 text-blue-900 pr-2 hover:scale-110 transition-transform duration-300">Skriv til mig</a>
+                    <a href="mailto:hello@jonasgoldberg.dk"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:scale-110 transition-transform duration-300">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                </a>
+                    
+                  </div>
+            </a>
+            
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+    <!-- END OF ABOUT-->
+
+    <!-- CASES-->
+   
+    <!-- component -->
+<section class="text-gray-600 body-font hidden md:block">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h2 class="mb-12 text-center text-2xl text-gray-700 font-lighter md:text-4xl">Et par cases</h2>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Se et lille udvalg af projekter, jeg har bygget i samarbejde med mine kunder.</p>
+      </div>
+      <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
+        <div class="-m-1 flex flex-wrap md:-m-2">
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <a href="www.kurvemageren.dk" target="_blank"><img
+                alt="gallery"
+                class="block h-full w-full rounded-lg object-cover object-center hover:scale-110 transition-transform duration-300"
+                src="../src/images/KM.png" />
+            </div>
+          </a>
+          </div>
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <a href="www.skinbjergdesign.dk" target="_blank"><img
+                alt="gallery"
+                class="block h-full w-full rounded-lg object-cover object-center hover:scale-110 transition-transform duration-300"
+                src="../src/images/SD.png" />
+            </div>
+          </a>
+          </div>
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <a href="www.kurvemagerne.dk" target="_blank"><img
+                alt="gallery"
+                class="block h-full w-full rounded-lg object-cover object-center hover:scale-110 transition-transform duration-300"
+                src="../src/images/KMG.png" />
+            </div>
+        </a>
+          </div>
+          
+        </div>
+      </div>
+       
+        
+      </div>
+    </div>
+  </section>
+
+
+    <!-- END OF CASES-->
+    <!-- TESTIMONIALS-->
+<!-- component -->
+
+<section id="testimonials">
+<div class="py-16 white bg-indigo-50">  
+    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+        <h2 class="mb-12 text-center text-2xl text-gray-700 font-lighter md:text-4xl">Udvalgte udtalelser</h2>
+        <div class="grid gap-8 md:grid-rows-2 lg:grid-cols-2">
+          <div class="row-span-2 p-6 border border-gray-100 rounded-xl bg-gray-50 text-center sm:p-8">
+            <div class="h-full flex flex-col justify-center space-y-4">
+              <img class="w-20 h-20 mx-auto rounded-full" src="../src/images/Ku-ucph-logo-svg.svg.png" alt="user avatar" height="220" width="220" loading="lazy">
+              <p class="text-gray-600 md:text-xl"> <span class="font-serif">"</span> I Studenterrådet ved Københavns Universitet har vi sat stor pris på Jonas Goldbergs professionalitet, fleksibilitet og kommunikative evner i forbindelse med videreudviklingen af foreningsliv-ku.dk. Han har løst tæt på samtlige problemer vi havde med websitet, på trods af en stram tidsplan, og hans tilbud om anbefalinger og sparring i forbindelse med sitet har være både kærkommen kyndige.<span class="font-serif">"</span></p>
+              <div>
+                  <h6 class="text-lg font-semibold leading-none">Edith Maria Lorentzen</h6>
+                  <span class="text-xs text-gray-500">Projektansvarlig, Københavns Universitet</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">
+            <img class="w-20 h-20 mx-auto rounded-full" src="../src/images/madsj.webp" alt="user avatar" height="220" width="220" loading="lazy">
+            <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
+              <p class="text-gray-600"> <span class="font-serif">"</span> Jonas hjalp mig med at bygge min hjemmeside fra bunden, og sørgede for at tilpasse den, så sitet matchede min målgruppe. Da jeg har begrænset viden om webudvikling, har det været en kæmpe hjælp at have Jonas ombord. Jeg kan varmt anbefale hans arbejde!<span class="font-serif">"</span></p>
+              <div>
+                  <h6 class="text-lg font-semibold leading-none">Mads Jørgensen</h6>
+                  <span class="text-xs text-gray-500">Online & Beyond</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">
+            <img class="w-20 h-20 mx-auto rounded-full" src="../src/images/alavali.png" alt="user avatar" height="220" width="220" loading="lazy">
+            <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
+              <p class="text-gray-600"> <span class="font-serif">"</span> Jonas is a real gem when it comes to website development and design. I was in a tight spot when I asked him to help me create my website from scratch. He had an amazing eye for detail and managed to customize the design perfectly to fit my brand. His help was invaluable and I would highly recommend him!<span class="font-serif">"</span></p>
+              <div>
+                  <h6 class="text-lg font-semibold leading-none">Liam Perth</h6>
+                  <span class="text-xs text-gray-500">Project Manager @ Avalsi Clothing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+</section>
+    <!-- END OF TESTIMONIALS-->
+<!-- CERTIFICATES-->       
+
+
+
+<!-- END OF CERTIFICATES-->    
+
+<!-- CONTACT-->    
+
+<section id="contact" class="bg-white">
+    <div class="container px-6 py-12 mx-auto">
+        <div class="text-center">
+        
+
+        </div>
+
+        <div class="grid grid-cols-1 gap-12 mt-10 md:grid-cols-2 lg:grid-cols-3">
+            <div class="flex flex-col items-center justify-center text-center">
+                <span class="p-3  text-blue-500 rounded-full bg-blue-100/80">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                </span>
+
+                
+                <p class="mt-2 text-gray-500 dark:text-gray-400">Jeg svarer altid inden 24 timer</p>
+                <a href="mailto:hello@jonasgoldberg.dk"> 
+                <p class="mt-2 text-blue-500 dark:text-blue-400 hover:scale-110 transition-transform duration-300">hello@jonasgoldberg.dk</p>
+            </a>
+            </div>
+
+            
+
+            <div class="flex justify-center items-center h-20 pt-4">
+                <img src="../src/images/cropped-jglogo.png" alt="Your Image" class="h-20" />
+              </div>
+              
+              
+
+  
+            
+
+            <div class="flex flex-col items-center justify-center text-center">
+                <span class="p-3 text-blue-500 rounded-full bg-blue-100/80">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                    </svg>
+                </span>
+                
+                
+                <p class="mt-2 text-gray-500 dark:text-gray-400 ">Man-Fre 08:00 - 16:30</p>
+                <a href="tel:22420207"
+                <p class="mt-2 text-blue-500 dark:text-blue-400 hover:scale-110 transition-transform duration-300">+45 2242 0207</p>
+            </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- END OF CONTACT-->    
+
+
+<!-- FOOTER-->    
+
+<section id="footer">
+
+<section class="bg-white">
+    <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+        
+        <div class="flex justify-center mt-8 space-x-6">
+            <a href="https://www.facebook.com/jonas.a.goldberg/" class="text-gray-400 hover:text-gray-500 hover:scale-110 transition-transform duration-300" target="_blank">
+                <span class="sr-only">Facebook</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/jonasgoldberg/" class="text-gray-400 hover:text-gray-500 hover:scale-110 transition-transform duration-300" target="_blank">
+                <span class="sr-only">Instagram</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+            
+            <a href="https://github.com/Jonasgoldberg-dev" class="text-gray-400 hover:text-gray-500 hover:scale-110 transition-transform duration-300" target="_blank">
+                <span class="sr-only">GitHub</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+            
+        </div>
+        <p class="mt-8 text-base leading-6 text-center text-gray-400">
+            © 2023 J. Goldberg, Inc. All rights reserved.
+        </p>
+    </div>
+</section>
+
+
+</section>
+
+<!-- END OF FOOTER-->    
+   
+
+
+      
+
+    
+
+
+</body>
+</html>
