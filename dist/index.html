@@ -19,37 +19,107 @@
     
     <div class="bg-white">
         <header class="absolute inset-x-0 top-0 z-50 ">
-          <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <div class="flex lg:flex-1">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Your Company</span>
-                <img class="h-10 w-auto" src="src/images/cropped-jglogo.png" alt="j.goldberg logo">
-              </a>
+          <!-- component -->
+<!-- AlpineJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.8.1/cdn.min.js" defer></script>
+
+<!-- Slider Component Container -->
+<div class="flex flex-col items-center justify-center mt-32" x-cloak x-data="appData()" x-init="appInit()">
+    <div class="flex flex-col">
+        <!-- Page Scroll Progress -->
+        <div class="fixed inset-x-0 top-0 z-50 h-0.5 mt-0.5
+            bg-blue-500" :style="`width: ${percent}%`"></div>
+
+        <!-- Navbar -->
+        <nav class="flex justify-around py-4 bg-white/80
+            backdrop-blur-md shadow-md w-full
+            fixed top-0 left-0 right-0 z-10">
+
+            <!-- Logo Container -->
+            <div class="flex items-center">
+                <!-- Logo -->
+                <a class="cursor-pointer">
+                    <h3 class="text-2xl font-medium text-gray-500">
+                        <img class="h-10 object-cover"
+                            src="src/images/cropped-jglogo.png" alt="Logo">
+                    </h3>
+                </a>
             </div>
-            <div class="flex lg:hidden">
-              <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Open main menu</span>
+
+            <!-- Links Section -->
+            <div class="items-center hidden space-x-8 lg:flex">
+                <a href="#services"class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300">
+                    Services
+                </a>
+
+                <a href="#about" class="flex text-gray-600 
+                    cursor-pointer transition-colors duration-300
+                    font-semibold text-blue-600">
+                    Om mig
+                </a>
+
+                <a href="#cases" class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300">
+                    Cases
+                </a>
+
+                <a href="#testimonials" class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300">
+                    Udtalelser
+                </a>
+
+                <a href="#contact"class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300">
+                    Kontakt
+                </a>
+
+              
+            </div>
+
+            <!-- Icon Menu Section -->
+            <div class="flex items-center space-x-5">
+                <!-- Register -->
                 
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-              </button>
+
+                <!-- Login -->
+                <a href="mailto:hello@jonasgoldberg.dk" class="flex text-gray-600 
+                    cursor-pointer transition-colors duration-300
+                    font-semibold text-blue-600 hover:scale-110 transition-transform duration-300">
+
+                    <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24"
+                        viewBox="">
+                        <path
+                            d="M17.388,4.751H2.613c-0.213,0-0.389,0.175-0.389,0.389v9.72c0,0.216,0.175,0.389,0.389,0.389h14.775c0.214,0,0.389-0.173,0.389-0.389v-9.72C17.776,4.926,17.602,4.751,17.388,4.751 M16.448,5.53L10,11.984L3.552,5.53H16.448zM3.002,6.081l3.921,3.925l-3.921,3.925V6.081z M3.56,14.471l3.914-3.916l2.253,2.253c0.153,0.153,0.395,0.153,0.548,0l2.253-2.253l3.913,3.916H3.56z M16.999,13.931l-3.921-3.925l3.921-3.925V13.931z" />
+                    </svg>
+
+                    Skriv til mig
+                </a>
             </div>
-            <div class="hidden lg:flex lg:gap-x-12">
-              <a href="#services" class="text-sm font-semibold leading-6 text-gray-900 hover:scale-110 transition-transform duration-300">Services</a>
-              <a href="#about" class="text-sm font-semibold leading-6 text-gray-900 hover:scale-110 transition-transform duration-300">Om mig</a>
-              <a href="#testimonials" class="text-sm font-semibold leading-6 text-gray-900 hover:scale-110 transition-transform duration-300">Udtalelser</a>
-              <a href="#contact" class="text-sm font-semibold leading-6 text-gray-900 hover:scale-110 transition-transform duration-300">Kontakt</a>
-            </div>
-            
-            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-              <a href="mailto:hello@jonasgoldberg.dk" class="text-sm font-semibold leading-6 text-gray-900 pr-2 hover:scale-110 transition-transform duration-300">Skriv til mig</a>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-              </svg>
-              
-              
-            </div>
-          </nav>
+        </nav>
+    </div>
+
+    <!-- Notes -->
+    
+</div>
+<script>
+    const appData = () => {
+        return {
+            percent: 0,
+
+            appInit() {
+                // source: https://codepen.io/A_kamel/pen/qBmmGKJ
+                window.addEventListener('scroll', () => {
+                    let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+                        height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+                    this.percent = Math.round((winScroll / height) * 100);
+                });
+            },
+        };
+    };
+</script>
          
       
         </header>
@@ -195,7 +265,7 @@
     <!-- CASES-->
    
     <!-- component -->
-<section class="text-gray-600 body-font hidden md:block">
+<section class="text-gray-600 body-font hidden md:block" id="cases">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
         <h2 class="mb-12 text-center text-2xl text-gray-700 font-lighter md:text-4xl">Et par cases</h2>
@@ -241,7 +311,7 @@
 
 
     <!-- END OF CASES-->
-    
+
     <!-- TESTIMONIALS-->
 <!-- component -->
 
