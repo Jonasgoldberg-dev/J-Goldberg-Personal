@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Goldberg Webudvikling</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" href="../src/images/cropped-jglogo.png" type="image/svg+xml">
+
+</head>
+
+<body>
+
+      
+    <!-- START OF MENU -->
+    
+    <div class="bg-white">
+        <header class="absolute inset-x-0 top-0 z-50 ">
+          <!-- component -->
+<!-- AlpineJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.8.1/cdn.min.js" defer></script>
+
+<!-- Slider Component Container -->
+<div class="flex flex-col items-center justify-center mt-32" x-cloak x-data="appData()" x-init="appInit()">
+    <div class="flex flex-col">
+        <!-- Page Scroll Progress -->
+        <div class="fixed inset-x-0 top-0 z-50 h-0.5 mt-0.5
+            bg-blue-500" :style="`width: ${percent}%`"></div>
+
+        <!-- Navbar -->
+        <nav class="flex justify-around py-4 bg-white/80
+            backdrop-blur-md shadow-md w-full
+            fixed top-0 left-0 right-0 z-10">
+
+            <!-- Logo Container -->
+            <div class="flex items-center">
+                <!-- Logo -->
+                <a class="cursor-pointer">
+                    <h3 class="text-2xl font-medium text-gray-500">
+                        <img class="h-10 object-cover"
+                            src="../src/images/cropped-jglogo.png" alt="Logo">
+                    </h3>
+                </a>
+            </div>
+
+            <!-- Links Section -->
+            <div class="items-center hidden space-x-8 lg:flex">
+                <a href="#services"class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300">
+                    Services
+                </a>
+
+                <a href="#about" class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300">
+                    Om mig
+                </a>
+
+                <a href="#cases" class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300">
+                    Cases
+                </a>
+
+                <a href="#testimonials" class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300">
+                    Udtalelser
+                </a>
+
+                <a href="#contact"class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300">
+                    Kontakt
+                </a>
+
+              
+            </div>
+
+            <!-- Icon Menu Section -->
+            <div class="flex items-center space-x-5">
+                <!-- Register -->
+                
+
+                <!-- Login -->
+                <a href="mailto:hello@jonasgoldberg.dk" class="flex text-gray-600 
+                    cursor-pointer transition-colors duration-300
+                    font-semibold text-blue-600 hover:scale-110 transition-transform duration-300">
+
+                    <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24"
+                        viewBox="">
+                        <path
+                            d="M17.388,4.751H2.613c-0.213,0-0.389,0.175-0.389,0.389v9.72c0,0.216,0.175,0.389,0.389,0.389h14.775c0.214,0,0.389-0.173,0.389-0.389v-9.72C17.776,4.926,17.602,4.751,17.388,4.751 M16.448,5.53L10,11.984L3.552,5.53H16.448zM3.002,6.081l3.921,3.925l-3.921,3.925V6.081z M3.56,14.471l3.914-3.916l2.253,2.253c0.153,0.153,0.395,0.153,0.548,0l2.253-2.253l3.913,3.916H3.56z M16.999,13.931l-3.921-3.925l3.921-3.925V13.931z" />
+                    </svg>
+
+                    
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Notes -->
+    
+</div>
+<script>
+    const appData = () => {
+        return {
+            percent: 0,
+
+            appInit() {
+                // source: https://codepen.io/A_kamel/pen/qBmmGKJ
+                window.addEventListener('scroll', () => {
+                    let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+                        height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+                    this.percent = Math.round((winScroll / height) * 100);
+                });
+            },
+        };
+    };
+</script>
+         
+        </header>
+<!-- END OF MENU -->
+    
+      
+<!-- SECTION ONE -->      
+    <div class="overflow-hidden bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:pr-8 lg:pt-4">
+              <div class="lg:max-w-lg">
+                <h2 class="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A better workflow</p>
+                <p class="mt-6 text-lg leading-8 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+                <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-900">
+                      <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z" clip-rule="evenodd" />
+                      </svg>
+                      Push to deploy.
+                    </dt>
+                    <dd class="inline">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</dd>
+                  </div>
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-900">
+                      <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                      </svg>
+                      SSL certificates.
+                    </dt>
+                    <dd class="inline">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</dd>
+                  </div>
+                  <div class="relative pl-9">
+                    <dt class="inline font-semibold text-gray-900">
+                      <svg class="absolute left-1 top-1 h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
+                        <path fill-rule="evenodd" d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z" clip-rule="evenodd" />
+                      </svg>
+                      Database backups.
+                    </dt>
+                    <dd class="inline">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <img src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+          </div>
+        </div>
+      </div>
+
+      <!-- END OF SECTION TWO --> 
+      
+</body>
